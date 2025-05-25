@@ -11,8 +11,8 @@ div{
  
 }
 h1{
-  width:100%
-    heigth:100%
+  width:100%;
+    heigth:100%;
   font-size: 2rem;
   text-align: center;
   color: #ff0000;
@@ -45,9 +45,6 @@ button{
 #bottonF{
   display:flex;
   margin: auto;
-
-
-
   
 }
 #slide10{
