@@ -1,69 +1,113 @@
-html {
-  height: 100%;
-  width: 100%;
-  font-size: 25px;
+/* Reset básico */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #17181a;
+  color: #f1f1f1;
+  overflow: hidden;
 }
-div{
 
-  width: 100%;
-  height: 100%;
-  
- 
-}
-h1{
-  width:100%;
-    heigth:100%;
-  font-size: 2rem;
+.slide {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 60px 40px 100px 40px;
+  position: absolute;
+  top: 0; left: 0;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
-  color: #ff0000;
-  background-color: #ffff00;
-  margin-left:20px;
+  background: rgba(23, 24, 26, 0.95);
+  transition: opacity 0.5s;
 }
-h2{
-  text-align: center;
-}
-p{
-  font-size: 2rem;
-  margin-left:  20px;
-  
-}
-body{
-  background: aquamarine;
-  border:2px solid;
 
+.slide.active {
+  display: flex;
+  opacity: 1;
+  z-index: 1;
 }
-button{
-  font-size: 25px;
-  padding: 20px;
-  margin: 0 3px;
-  border: 2px solid black;
-  border-radius: 9px;
-  cursor: pointer;
+
+h1 {
+  font-size: 2.7rem;
+  margin-bottom: 1rem;
+  color: #ffe066;
+  text-shadow: 2px 2px 8px #00000090;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.2rem;
+  color: #00d1b2;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  max-width: 700px;
   margin: 0 auto;
-  color:blue
 }
-#bottonF{
-  display:flex;
-  margin: auto;
-  
+
+.botton {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
 }
-#slide10{
-  width:100%;
-  heigth:100%;
-  border-top:2px solid red;
-  border-bottom:2px solid red;
-  border-left:2px solid red;
-  justify-items: center;
+
+button {
+  background: #00b4d8;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  padding: 15px 35px;
+  font-size: 1.2rem;
+  margin: 0 15px;
+  cursor: pointer;
+  box-shadow: 0 2px 10px #00000040;
+  transition: background 0.2s;
 }
-footer{
-  font-size:80%;
-  background-color: #e6e6e6;
-  padding: 5px;
-  border: 2px solid black;
-  margin-left: 10px;
+
+button:hover {
+  background: #023e8a;
+}
+
+footer {
+  position: fixed;
+  bottom: 5px;
+  left: 0;
+  width: 100vw;
   text-align: center;
-  
-  width: 100%;
-  
-  
+  color: #ccc;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  z-index: 5;
+}
+
+/* Adaptar para dispositivos móveis */
+@media (max-width: 600px) {
+  .slide {
+    padding: 30px 5vw 120px 5vw;
   }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.1rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  button {
+    padding: 10px 22px;
+    font-size: 1rem;
+    margin: 0 6px;
+  }
+}
